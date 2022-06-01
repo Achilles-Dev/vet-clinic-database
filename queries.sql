@@ -57,3 +57,9 @@ ROLLBACK TO SP_1;
 UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
 
 COMMIT;
+
+-- Answering questions with queries
+
+SELECT COUNT(*) FROM animals;
+
+SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
