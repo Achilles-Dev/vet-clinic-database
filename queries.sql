@@ -63,3 +63,13 @@ COMMIT;
 SELECT COUNT(*) FROM animals;
 
 SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
+
+SELECT AVG(weight_kg) FROM animals;
+
+SELECT neutered, SUM(escape_attempts) FROM animals GROUP BY neutered;
+
+SELECT neutered, MAX(weight_kg) as Max_weight, MIN(weight_kg) as Max_weight  FROM animals GROUP BY neutered;
+
+SELECT neutered, AVG(escape_attempts) as Average_escape_attempts FROM animals WHERE date_of_birth <= '2000-12-31'
+  AND date_of_birth >= '1990-01-01' GROUP BY neutered;
+
