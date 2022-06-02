@@ -49,7 +49,6 @@ CREATE TABLE specializations (
     id INT GENERATED ALWAYS AS IDENTITY,
     species_id INT,
     vet_id INT,
-    PRIMARY KEY (id),
     FOREIGN KEY (species_id) REFERENCES species (id),
     FOREIGN KEY (vet_id) REFERENCES vets (id)
 );
